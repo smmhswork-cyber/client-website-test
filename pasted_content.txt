@@ -1,0 +1,147 @@
+# Website Build: The Cookie Lady — Signal Mountain, TN
+
+## Project Overview
+Build a complete, production-ready single-page website for "The Cookie Lady" (officially "Signal Mountain Cookie Lady"), a beloved owner-operated artisan bakery located at 1217 Taft Hwy, Signal Mountain, TN 37377.
+
+---
+
+## Business Information (Use Exactly As Provided)
+
+**Business Name:** The Cookie Lady
+**Tagline:** "Cookies make life sweeter."
+**Owner:** Sandie Benson
+**Address:** 1217 Taft Hwy, Signal Mountain, TN 37377
+**Phone:** (423) 886-4037
+**Email:** heather.cookielady@gmail.com
+
+**Hours:**
+- Monday: Closed
+- Tuesday–Thursday: 9:00 AM – 5:00 PM
+- Friday: 9:00 AM – 4:00 PM
+- Saturday: 9:00 AM – (check for current hours)
+- Sunday: Closed
+
+**About:**
+Sandie Benson is the Cookie Lady. A former dental assistant who left her career 13+ years ago to follow her passion for baking. She and her small team make an average of 450 cookies per day, each one hand-decorated. Recipes are a closely guarded secret — eggs, butter, vanilla, and sugar are just the beginning.
+
+**Specialties:**
+- Custom hand-decorated sugar cookies (900+ cutter shapes available)
+- Soft shortbread base with light sugar glaze icing
+- Chocolate chip cookies
+- Small filled cookies
+- Photo-frosting process (logo or custom photo cookies)
+- Pizza-sized cookies (original, chocolate, chocolate chip) — pre-order
+- Cupcakes — by order only
+
+**Key Selling Points:**
+- Walk-ins welcome; pre-orders accepted for any occasion
+- Peanut-free bakery
+- Seasonal rotating cookie designs
+- Custom orders for: birthdays, baby showers, weddings, class parties, corporate events
+- 4.8/5 stars on TripAdvisor, ranked #2 of 13 in Signal Mountain
+- Featured on local news ("Made in Our Hometown", NewsChannel 9)
+
+---
+
+## Design Direction
+
+**Aesthetic:** Minimal, light, modern, premium artisan. Think: warm white and cream backgrounds, subtle pastel accents pulled from cookie icing colors (soft blush pink, sage green, pale lavender, butter yellow). Clean sans-serif typography paired with one elegant serif or script font for headings. Lots of whitespace. The site should feel like a high-end patisserie that also happens to be warm and community-rooted.
+
+**Mood:** Joyful but refined. Not kitschy or cutesy — elevated and artisanal. Like if a Signal Mountain bakery got a Parisian rebrand.
+
+**Color Palette:**
+- Background: #FDFAF6 (warm off-white)
+- Primary accent: #E8C5B0 (warm blush/peach)
+- Secondary accent: #C8D8C0 (sage green)
+- Text: #2C2C2C
+- Highlight/CTA: #D4956A (warm terracotta)
+
+**Typography:**
+- Headings: Playfair Display or Cormorant Garamond (elegant serif)
+- Body: Inter or DM Sans (clean, modern)
+- Accent/script: Dancing Script or Pacifico for decorative elements only
+
+---
+
+## 3D Animations & Interactivity (Critical Requirement)
+
+Use Three.js or React Three Fiber to implement the following interactive 3D elements. All animations must be smooth, performant, and feel premium — not gimmicky.
+
+1. **Hero Section — Floating Cookie Scene:**
+   A softly lit 3D scene with 3–5 stylized sugar cookie shapes (star, circle, heart, gingerbread man) gently floating and slowly rotating in 3D space. Cookies should have a frosted/iced pastel appearance with subtle specularity. Mouse movement should cause a gentle parallax tilt on the whole scene (the cookies drift slightly toward the cursor). On scroll, the cookies slowly drift upward and fade out.
+
+2. **"Our Cookies" Section — 3D Cookie Reveal:**
+   As the user scrolls into this section, a single large decorated cookie 3D model rotates into view from flat/edge-on to face-forward, as if being placed on a counter. Use scroll-linked animation (GSAP ScrollTrigger or equivalent). The cookie should have a glistening iced surface (normal/roughness map for realism).
+
+3. **Ordering CTA — Sprinkle Particle System:**
+   Behind or around the "Place an Order" call-to-action button, implement a subtle Three.js particle system that rains colorful sprinkle-like confetti particles slowly downward in 3D. Particles should be small elongated cylinders or flat discs in pastel colors. Keep it subtle — background atmosphere, not foreground chaos.
+
+4. **Cursor Trail (Optional but preferred):**
+   A gentle cookie-crumb or sprinkle particle trail that follows the cursor across the page with a short fade-out tail.
+
+---
+
+## Page Sections (in order)
+
+### 1. Navigation
+Sticky, minimal navbar. Logo (text-based wordmark: "The Cookie Lady" in script font) on the left. Links: About · Menu · Gallery · Order · Contact. On mobile: hamburger menu with smooth slide-in drawer. Background: transparent over hero, transitions to solid white/cream on scroll.
+
+### 2. Hero Section
+Full-viewport hero. 3D floating cookie scene (described above) occupies the right 50% of the viewport on desktop (full-bleed on mobile with reduced z-index behind text). Left side: large headline ("Hand-crafted. \n One at a time."), subheadline ("Signal Mountain's favorite custom sugar cookies, baked fresh daily by Sandie and her team."), and two CTAs: "Order Now" (filled terracotta button) and "See Our Cookies" (ghost/outlined button).
+
+### 3. About Strip
+Short horizontal strip or asymmetric card layout. Left: warm lifestyle photo placeholder (use a high-quality Unsplash cookie/bakery image as placeholder, or instruct Manus to source free stock). Right: short brand story paragraph about Sandie, her 13+ years, 450 cookies/day, peanut-free kitchen, and love for the craft. Include a pull-quote: *"I have no regrets — this is just what I love to do." — Sandie Benson*
+
+### 4. What We Make (Menu/Products)
+Clean card grid (3 columns desktop, 1–2 mobile). Cards for:
+- Custom Decorated Sugar Cookies
+- Chocolate Chip Cookies
+- Photo Frosting Cookies
+- Pizza-Sized Cookies
+- Cupcakes (by order)
+- Seasonal Specials
+
+Each card: minimal illustration or icon, name, short description, subtle hover lift animation (3D CSS transform). Include note: "900+ cookie cutter shapes available for custom orders."
+
+### 5. 3D Cookie Reveal + "Our Process" (scroll-animated section)
+Two-column layout. Left: the 3D scroll-animated cookie model. Right: 3–4 short steps describing the process (Order → Bake → Decorate → Pickup/Deliver). Use a vertical step timeline with animated line-draw on scroll entry.
+
+### 6. Photo Gallery
+Full-width masonry or CSS grid gallery. 9–12 photo slots. Source images from: The Cookie Lady's Facebook page (https://www.facebook.com/p/Signal-Mountain-Cookie-Lady-100063786662503/) — scrape or download publicly available photos. If unable to scrape, use high-quality Unsplash/Pexels sugar cookie and decorated cookie photos as placeholders, and label them clearly as "[Replace with actual product photos]". Add a subtle lightbox on click (no external library dependencies preferred — implement a simple CSS/JS lightbox). Gallery should have a slight staggered fade-in animation on scroll entry.
+
+### 7. Ordering / CTA Section
+Full-width section with the sprinkle particle system background (described above). Centered: headline "Ready to order?", body copy covering walk-in hours and pre-order options, and a large "Place an Order" button (links to mailto: or a simple contact form below). Include a note about custom orders and lead times.
+
+### 8. Contact & Hours
+Two-column layout: left has a styled hours table, right has contact info (phone, email, address) plus an embedded Google Maps iframe for 1217 Taft Hwy, Signal Mountain, TN 37377. Keep it clean and minimal.
+
+### 9. Footer
+Minimal. Wordmark, tagline, Facebook link (https://www.facebook.com/p/Signal-Mountain-Cookie-Lady-100063786662503/), address, and copyright.
+
+---
+
+## Technical Requirements
+
+- **Framework:** React (Vite) or plain HTML/CSS/JS — whichever produces cleaner output. React preferred for 3D component management.
+- **3D:** Three.js directly, or React Three Fiber + Drei if using React.
+- **Animation:** GSAP (with ScrollTrigger) for scroll-linked animations. Framer Motion acceptable for UI micro-interactions if using React.
+- **No heavy UI libraries** (no Bootstrap, no MUI). Tailwind CSS is acceptable for layout utilities.
+- **Fully responsive:** Mobile-first. All 3D elements must gracefully degrade or simplify on mobile (reduce poly count, disable cursor trail, simplify particle count).
+- **Performance:** Lazy-load gallery images. 3D canvas elements should use `requestAnimationFrame` efficiently — pause when not in viewport using Intersection Observer.
+- **Accessibility:** Semantic HTML, proper `alt` text on all images, keyboard-navigable nav, sufficient color contrast.
+- **No placeholder lorem ipsum** — use real business copy from the information provided above.
+
+---
+
+## Deliverables
+
+1. Complete, runnable source code
+2. All assets organized in `/public` or `/assets`
+3. `README.md` with setup instructions (`npm install && npm run dev`)
+4. Clearly commented sections in code for easy client handoff
+5. All placeholder images labeled with `[REPLACE]` comments so the client knows what to swap
+
+---
+
+## Final Note to Manus
+This is a real local business beloved by its community. The website should feel like it was made with as much care as the cookies themselves — precise, warm, and crafted with intention. Prioritize visual polish and smooth interactions above feature quantity. If a 3D element isn't rendering beautifully, simplify the geometry and nail the lighting instead.
